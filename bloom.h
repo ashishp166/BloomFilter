@@ -22,6 +22,10 @@ struct bloom
     unsigned long int bytes;
     unsigned char hashes;
     double error;
+
+    unsigned char ready;
+    double bpe;
+    unsigned char * bf;
 };
 /*
 * initializes bloom filter
