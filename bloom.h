@@ -23,9 +23,9 @@ struct bloom
     unsigned char hashes;
     double error;
 
-    unsigned char ready;
-    double bpe;
-    unsigned char * bf;
+    unsigned char ready; // if bloom filter initalized by calling bloom_init
+    double bpe; // bits per element
+    unsigned char * bf; // bit array address
 };
 /*
 * initializes bloom filter
