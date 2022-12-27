@@ -8,9 +8,12 @@ Solution: A bloom filter uses multiple hash functions that call the element as i
 Applications of Bloom Filters: caching, packet routing and forwarding, p2p networks
 
 Literary Reviews:
+
     1. https://dl.acm.org/doi/10.5555/1400123.1400125
         -Given 2 hash functions h1 and h2, you can create k hash funcctions wihtout increasin gthe asymptotic false positive probability. gi(x) = hh1(x) + ih2(x) + i^2 mod m where m is the size of the hash table and i goes from 0 to k - 1. While having k pairwise indepenedent hash functions result in there being a constant increase in the space to keep the same bound of false postive probabiliy, but with using the gi's there is no increase for the bound of false positive probability. Therefor it is viewed as a replacement for fully random hash functions.
+
     2. https://arxiv.org/abs/1212.3964
         -De-duplication is a streaming scenario is the process of getting rid of duplicates in unbounded data streams. Reservoir Sampling based Bloom Filter(RSBF) is based on applying reservoir sampling and bloom filters. Secondly, Biased Sampling based Bloom Filters(BSBF) is based on biased smapling concepts. 
+        
     3. https://www.cs.cmu.edu/~dga/papers/cuckoo-conext2014.pdf
         -Bloom filters don't support deletion because if you choose to remove an element without rebuilding the whole filter, then this means that there would be false negatives in the data structure as you might have an instance of an element, but it would output that the element does not ecist.
