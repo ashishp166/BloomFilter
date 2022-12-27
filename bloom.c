@@ -109,7 +109,7 @@ int bloom_check(struct bloom * bloom, const void * buffer, int len)
     return bloom_check_add(bloom, buffer, len, 0);
 }
 
-int bloom_add(struct bloom * bloom, const, void * buffer, int len)
+int bloom_add(struct bloom * bloom, const void * buffer, int len)
 {
     return bloom_check_add(bloom, buffer, len, 1);
 }
