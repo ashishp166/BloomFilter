@@ -11,9 +11,8 @@
 #include "bloom.h"
 #include "murmurhash2.h"
 
-#define MAKESTRING(n) STRING(n)
-#define STRING(n) #n
-#define BLOOM_MAGIC "libbloom2"
+//#define MAKESTRING(n) STRING(n)
+//#define STRING(n) #n
 
 inline static int test_bit_set_bit(unsigned char * buf,
                                     unsigned long int bit, int set_bit)
