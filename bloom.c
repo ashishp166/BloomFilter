@@ -92,7 +92,7 @@ int bloom_init(struct bloom * bloom, unsigned int entries, double error)
         bloom->bytes = bloom->bits / 8; // 8 bits in one byte
     }
 
-    bloom->hashes = (unsigned char)ceil(0.6931471805599 * bloom *bpe); // ln(2)
+    bloom->hashes = (unsigned char)ceil(0.6931471805599 * bloom->bpe); // ln(2)
     
     bloom->bf = (unsigned char *)calloc(bloom->bytes, sizeof(unsigned char));
     if (bloom->bf == NULL) {
